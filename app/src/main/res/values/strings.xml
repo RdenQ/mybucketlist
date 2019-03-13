@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Bucket List</string>
+    <string name="loading">Please wait ...</string>
+    <string name="name">Izabela</string>
+    <string name="date">12:12</string>
+    <string name="empty_list">This list is empty.</string>
+    <string name="country_list_title">All countries</string>
+    <string name="country_details_title">Country details</string>
+    <string name="bucket_list_title">My Bucket List</string>
+    <string name="added_country_to_bucket_list">Added country to Bucket List</string>
+    <string name="bucket_country_added_on">%1$s added on %2$s</string>
+</resources>

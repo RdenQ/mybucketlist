@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+            android:id="@+id/bucket_list_fragment"
+            android:title="@string/bucket_list_title"/>
+    <item
+            android:id="@+id/country_list_fragment"
+            android:title="@string/country_list_title"/>
+</menu>

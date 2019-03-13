@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            app:startDestination="@+id/country_list_fragment">
+
+    <fragment
+            android:id="@+id/bucket_list_fragment"
+            android:name="com.rdenq.bucketlist.ui.BucketListFragment"
+            android:label="@string/bucket_list_title"
+            tools:layout="@layout/fragment_bucket_list">
+
+        <action
+                android:id="@+id/action_bucket_list_fragment_to_country_details_fragment"
+                app:destination="@id/country_details_fragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right" app:popUpToInclusive="false"/>
+    </fragment>
+
+    <fragment
+            android:id="@+id/country_list_fragment"
+            android:name="com.rdenq.bucketlist.ui.CountryListFragment"
+            android:label="@string/country_list_title"
+            tools:layout="@layout/fragment_country_list">
+
+        <action
+                android:id="@+id/action_country_list_fragment_to_country_details_fragment"
+                app:destination="@id/country_details_fragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+            android:id="@+id/country_details_fragment"
+            android:name="com.rdenq.bucketlist.ui.CountryDetailsFragment"
+            android:label="@string/country_details_title"
+            tools:layout="@layout/fragment_country_details">
+        <argument
+                android:name="countryName"
+                app:argType="string" />
+    </fragment>
+
+</navigation>
