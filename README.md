@@ -1,5 +1,5 @@
 # Bucket List
-================
+
 
 Sample app - Kotlin, MVVM , LiveData, Room, Navigation, Dagger2 and RxJava
 
