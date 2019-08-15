@@ -21,6 +21,7 @@ class BucketListViewModel @Inject constructor(bucketCountryRepository: BucketCou
         bucketCountryRepository.getBucketCountries(
             { listOfBucketCountries ->
                 Log.d(TAG, "bucketCountryList.success() called with: $listOfBucketCountries")
+                // a livedata method to post a task to a main thread to set the given value (setvalue can be called from main thread)
                 bucketCountryList.postValue(listOfBucketCountries)
             },
             {
@@ -35,6 +36,7 @@ class BucketListViewModel @Inject constructor(bucketCountryRepository: BucketCou
             { result ->
                 Log.d(TAG, "countryAndBucketCountryList.success() called with: $result")
                 val addedToBucketList = result.filter {it.bucketListCountries.isNotEmpty() }.toMutableList()
+                // a livedata method to post a task to a main thread to set the given value (setvalue can be called from main thread)
                 countryAndBucketCountryList.postValue(addedToBucketList)
             },
             {

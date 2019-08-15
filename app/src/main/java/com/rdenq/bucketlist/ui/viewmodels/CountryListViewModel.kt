@@ -17,6 +17,7 @@ class CountryListViewModel @Inject constructor(appRepository: AppRepository) : B
         appRepository.getCountries(
             { listOfCountries ->
                 Log.d(TAG, "getCountryList.success() called with: $listOfCountries")
+                // a livedata method to post a task to a main thread to set the given value (setvalue can be called from main thread)
                 countryList.postValue(listOfCountries)
                 if (listOfCountries.size > 0) {
                     for (country in listOfCountries) {
