@@ -27,6 +27,7 @@ class CountryDetailsViewModel @Inject constructor(
         mappRepository.getCountry(name,
             { result ->
                 Log.d(TAG, "getCountry.success() called with: $result")
+                // a livedata method to post a task to a main thread to set the given value (setvalue can be called from main thread)
                 country.postValue(result)
             },
             {

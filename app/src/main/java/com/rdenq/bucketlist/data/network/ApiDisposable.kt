@@ -30,7 +30,7 @@ class ApiDisposable<T>(
         Log.d(TAG, "onError: $e")
         when (e) {
             is HttpException -> {
-                val errorMessage = getErrorMessage(e.response().errorBody())
+                val errorMessage = getErrorMessage(e.response()?.errorBody())
                 failure(ApiError(ApiError.ApiStatus.BAD_RESPONSE, e.code(), errorMessage))
             }
             is SocketTimeoutException -> {
